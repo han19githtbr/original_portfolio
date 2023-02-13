@@ -1,0 +1,126 @@
+header {
+  height: 100vh;
+  padding-top: 3rem;
+  //overflow: hidden;  
+}
+
+.header_container {
+  text-align: center;
+  height: 100%;
+  position: relative;  
+}
+
+
+/* ************************* CTA ******************** */
+.cta {
+  margin-top: 2.5rem;  
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* ******************** HEADER SOCIALS  ************ */
+@keyframes zoom {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(2.5);
+    }
+}
+
+
+.header_socials {
+  display: flex;
+  flex-direction: column;
+  align-itens: center;  
+  gap: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+
+.linkedin_icone:hover {
+  animation: zoom 0.5s infinite;
+    
+} 
+
+.github_icone:hover {
+  animation: zoom 0.5s infinite;
+} 
+  
+
+.facebook_icone:hover {
+  animation: zoom 0.3s infinite;
+} 
+  
+
+/*.header_socials::after {
+  content: '';
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);  
+  animation: zoom 1s;  
+}*/
+
+
+/* ******************** EU  ************ */
+.eu {
+  background: linear-gradient(var(--color-secundary), transparent);  
+  width: 20rem;
+  height: 30rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  bottom: calc(50% - 30rem);
+  margin-top: 3rem;
+  border-radius: 8rem 8rem 0 0;
+  //padding-top: -5rem;
+  //overflow: hidden;
+}
+
+
+/* ******************** SCROLL DOWN  ************ */
+@keyframes mymove {
+    from {
+        bottom: 100px;
+    }
+    to {
+        bottom: 75px;
+    }
+}
+  
+.scroll_down #icone-down {
+  position: absolute;  
+  right: -2.3rem;
+  bottom: 5rem;
+  height: 30px;
+  width: 100px;
+  animation: mymove 0.8s infinite;  
+}
+
+.scroll_down #icone-down:hover {
+  animation: mymove 10s infinite;;  
+  cursor: pointer;
+
+}
+
+
+/* ************************** MEDIA QUERIES (MEDIUM DEVICES) ************************ */
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }  
+}    
+
+
+/* ************************** MEDIA QUERIES (SMALL DEVICES) ************************ */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }  
+
+  .header_socials,
+  .scroll_down {
+    display: none;
+  }
+}    
